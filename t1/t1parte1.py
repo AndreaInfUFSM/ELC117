@@ -35,3 +35,20 @@ def somaQuad(x,y):
   out: numeric
     Valor numerico de mesmo tipo de `x` e `y`."""
   return x**2 + y**2
+
+
+def hasEqHeads(l1,l2):
+  """Verifica se duas listas possuem o mesmo primeiro elemento.
+
+  Parameters
+  ----------
+  l1: list
+
+  l2: list
+
+  Returns
+  -------
+  out: boolean
+    True caso l1[0] e l2[0] forem iguais."""
+  return l1[0] == l2[0]
+

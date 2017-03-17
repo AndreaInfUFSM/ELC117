@@ -38,14 +38,26 @@ class TestTrabalho1Parte1(unittest.TestCase):
     # 10*10+10*10 = 200
     self.assertEqual(t1parte1.somaQuad(10,10), 200)
 
-  # Testa função somaQuad com valores aleatórios
+  # Testa função somaQuad com valores aleatórios.
   def test_somaQuad_rand(self):
     random.seed()
-    # Realiza 100 testes aleatórios com valores entre 0 e 10000
+    # Realiza 100 testes aleatórios com valores entre 0 e 10000.
     for _ in range(0,100):
       rx = random.uniform(0, 10000)
       ry = random.uniform(0, 10000)
       self.assertEqual(t1parte1.somaQuad(rx, ry), rx**2+ry**2)
+
+  # Testa função hasEqHeads em caso de igualdade.
+  def test_hasEqHeads_equal(self):
+    l1 = [1,2,3,4]
+    l2 = [1,4,3,2]
+    self.assertTrue(t1parte1.hasEqHeads(l1,l2))
+
+  # Testa função hasEqHeads em caso de valores diferentes.
+  def test_hasEqHeads_diff(self):
+    l1 = [1,2,3,4]
+    l2 = [4,3,2,1]
+    self.assertFalse(t1parte1.hasEqHeads(l1,l2))
 
 if __name__ == '__main__':
   unittest.main()
