@@ -21,5 +21,31 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-def somaQuad(x,y):
-  return x**2 + y**2
+import unittest
+import random
+
+import t1parte1
+
+class TestTrabalho1Parte1(unittest.TestCase):
+  # Testa função somaQuad com valores pre-definidos
+  def test_somaQuad_simple(self):
+    # 1*1+1*1 = 2
+    self.assertEqual(t1parte1.somaQuad(1,1), 2)
+    # 2*2+1*1 = 5
+    self.assertEqual(t1parte1.somaQuad(2,1), 5)
+    # 2*2+2*2 = 8
+    self.assertEqual(t1parte1.somaQuad(2,2), 8)
+    # 10*10+10*10 = 200
+    self.assertEqual(t1parte1.somaQuad(10,10), 200)
+
+  # Testa função somaQuad com valores aleatórios
+  def test_somaQuad_rand(self):
+    random.seed()
+    # Realiza 100 testes aleatórios
+    for _ in range(0,100):
+      rx = random.uniform(0, 10000)
+      ry = random.uniform(0, 10000)
+      self.assertEqual(t1parte1.somaQuad(rx, ry), rx**2+ry**2)
+
+if __name__ == '__main__':
+  unittest.main()
