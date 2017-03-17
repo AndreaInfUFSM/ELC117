@@ -22,4 +22,16 @@
 # THE SOFTWARE.
 
 def somaQuad(x,y):
+  """Retorna a soma dos quadrados de dois números, preservando o tipo original.
+
+  Parameters
+  ----------
+  x: numeric
+
+  y: numeric
+
+  Returns
+  -------
+  out: numeric
+    Valor numerico de mesmo tipo de `x` e `y`."""
   return x**2 + y**2

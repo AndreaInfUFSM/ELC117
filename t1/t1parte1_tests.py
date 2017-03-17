@@ -41,7 +41,7 @@ class TestTrabalho1Parte1(unittest.TestCase):
   # Testa função somaQuad com valores aleatórios
   def test_somaQuad_rand(self):
     random.seed()
-    # Realiza 100 testes aleatórios
+    # Realiza 100 testes aleatórios com valores entre 0 e 10000
     for _ in range(0,100):
       rx = random.uniform(0, 10000)
       ry = random.uniform(0, 10000)
