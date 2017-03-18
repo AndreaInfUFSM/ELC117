@@ -21,6 +21,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+
+# Defina uma função somaQuad(x,y) que calcule a soma dos quadrados de dois
+# números x e y.
 def somaQuad(x,y):
     """Retorna a soma dos quadrados de dois números, preservando o tipo original.
 
@@ -36,6 +39,8 @@ def somaQuad(x,y):
     return x**2 + y**2
 
 
+# Crie uma função hasEqHeads(l1,l2) que verifique se as listas l1
+# e l2 possuem o mesmo primeiro elemento.
 def hasEqHeads(l1,l2):
     """Verifica se duas listas possuem o mesmo primeiro elemento.
 
@@ -51,6 +56,9 @@ def hasEqHeads(l1,l2):
     return l1[0] == l2[0]
 
 
+# Escreva uma função que receba uma lista de nomes e retorne uma lista com a
+# string "Sr. " adicionada ao início de cada nome. Defina uma função auxiliar
+# para ajudar neste exercício.
 def srify(l):
     """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
     nome.
@@ -67,6 +75,8 @@ def srify(l):
     return list(map(addSr, l))
 
 
+# Crie uma função que receba uma string e retorne o número de espaços
+# nela contidos. Defina uma função auxiliar para ajudar neste exercício.
 def countSpaces(s):
     """Recebe uma string e retorna o número de espaços nela contidos
 
@@ -83,6 +93,9 @@ def countSpaces(s):
     return len(list(filter(isSpace,s)))
 
 
+# Escreva uma função que, dada uma lista de números, calcule 3n*2 + 2/n + 1 para
+# cada número n da lista. Defina uma função auxiliar para ajudar neste
+# exercício.
 def calcListPoly(l):
     """Recebe uma lista de números aplicando a função `calcPoly` para cada
     número na lista. Retorna uma lista com os resultados.
@@ -98,6 +111,10 @@ def calcListPoly(l):
         return 3.*(n**2.) + (2./n) + 1.
     return list(map(calcPoly, l))
 
+
+# Escreva uma função que, dada uma lista de números, retorne uma lista com
+# apenas os que forem negativos. Defina uma função auxiliar para ajudar neste
+# exercício.
 def negatives(l):
     """Recebe uma lista de números e retorna outra lista contendo somente os
     números negativos.
@@ -113,6 +130,10 @@ def negatives(l):
         return n < 0
     return list(filter(isNegative, l))
 
+
+# Escreva uma função que receba uma lista de números e retorne somente os que
+# estiverem entre 1 e 100, inclusive. Defina uma função auxiliar para ajudar
+# neste exercício.
 def between1and100(l):
     """Recebe uma lista de números e retorna outra lista contendo somente os
     números entre 1 em 100, inclusive.
@@ -128,6 +149,9 @@ def between1and100(l):
         return (n >= 1) and (n<=100)
     return list(filter(isBetween1and100,l))
 
+
+# Escreva uma função que receba uma lista de números e retorne somente aqueles
+# que forem pares. Defina uma função auxiliar para ajudar neste exercício.
 def evens(l):
     """Recebe uma lista de números e retorna outra lista contendo somente os
     números pares.
@@ -143,6 +167,10 @@ def evens(l):
         return n%2 == 0
     return list(filter(isEven, l))
 
+
+# Crie uma função charFound(c,s) que verifique se o caracter c está contido na
+# string. O resultado deve ser True ou False. Você não deve usar o operador in.
+# Defina uma função auxiliar para ajudar neste exercício.
 def charFound(c,s):
     """Recebe um caractere e uma string, retornando `True` caso o caractere
     estiver contido na string e False caso contrário.
@@ -159,6 +187,10 @@ def charFound(c,s):
         return c1==c2
     return len(list(filter(isCharEq,s))) >= 1
 
+
+# Escreva uma função que receba uma lista de strings e retorne uma nova lista
+# com adição de marcações HTML (p.ex.: <B> e </B>) antes e depois de cada
+# string.
 def tagify(tag, l):
     """Recebe uma lista de strings e uma tag, retornando outra lista de
     strings com a tag adicionada no início e final de cada string.
@@ -174,3 +206,4 @@ def tagify(tag, l):
     def addTag(s,t=tag):
         return "<" + t + ">" + s + "</" + t + ">"
     return list(map(addTag,l))
+
