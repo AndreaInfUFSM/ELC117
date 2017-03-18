@@ -131,6 +131,10 @@ class TestTrabalho1Parte1(unittest.TestCase):
         self.assertFalse(t1parte1.isEven(1))
         self.assertFalse(t1parte1.isEven(5))
         self.assertFalse(t1parte1.isEven(101))
+        for _ in range(0, 1000):
+            self.assertTrue(t1parte1.isEven(random.randint(1,10000)*2))
+        for _ in range(0, 1000):
+            self.assertFalse(t1parte1.isEven(random.randint(1,10000)*2+1))
 
     def test_evens(self):
         l = [1,2,3,4,5,6,7,8,9,10]
