@@ -78,3 +78,28 @@ def srify(l):
   out: list"""
   return list(map(addSr, l))
 
+def isSpace(c):
+  """Recebe um caractere e verifica se é um espaço em branco
+
+  Parameters
+  ----------
+  c: character
+
+  Returns
+  -------
+  out: boolean
+    True em caso de espaço, False caso contrário"""
+  return c == " "
+
+def countSpaces(s):
+  """Recebe uma string e retorna o número de espaços nela contidos
+
+  Parameters
+  ----------
+  s: string
+
+  Returns
+  -------
+  out: integer
+    número de espaços contidos em `s`"""
+  return len(list(filter(isSpace,s)))

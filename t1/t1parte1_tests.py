@@ -69,6 +69,20 @@ class TestTrabalho1Parte1(unittest.TestCase):
     lr = ["Sr. Noam Chomsky", "Sr. George Orwell", "Sr. David Harvey"]
     self.assertListEqual(t1parte1.srify(l), lr)
 
+  # Testa função isSapce
+  def test_isSapce(self):
+    self.assertTrue(t1parte1.isSpace(" "))
+    self.assertFalse(t1parte1.isSpace("a"))
+
+  # Testa função countSpaces
+  def test_countSpaces(self):
+      um = " "
+      dois = "  "
+      cinco = "     "
+      self.assertEqual(t1parte1.countSpaces(um), 1)
+      self.assertEqual(t1parte1.countSpaces(dois), 2)
+      self.assertEqual(t1parte1.countSpaces(cinco), 5)
+
 
 if __name__ == '__main__':
   unittest.main()
