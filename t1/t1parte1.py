@@ -52,3 +52,29 @@ def hasEqHeads(l1,l2):
     True caso l1[0] e l2[0] forem iguais."""
   return l1[0] == l2[0]
 
+def addSr(s):
+  """Adiciona a string "Sr. " na frente de uma dada string.
+
+  Parameters
+  ----------
+  s: string
+
+  Returns
+  -------
+  out: string
+    "Sr. " + s"""
+  return "Sr. " + s
+
+def srify(l):
+  """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
+  nome.
+
+  Parameters
+  ----------
+  l: list
+
+  Returns
+  -------
+  out: list"""
+  return list(map(addSr, l))
+

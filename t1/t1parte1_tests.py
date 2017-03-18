@@ -59,5 +59,16 @@ class TestTrabalho1Parte1(unittest.TestCase):
     l2 = [4,3,2,1]
     self.assertFalse(t1parte1.hasEqHeads(l1,l2))
 
+  # Testa função auxiliar addSr
+  def test_addSr(self):
+      self.assertEqual(t1parte1.addSr("Noam Chomsky"), "Sr. Noam Chomsky")
+
+  # Testa funcão srify
+  def test_srify(self):
+    l = ["Noam Chomsky", "George Orwell", "David Harvey"]
+    lr = ["Sr. Noam Chomsky", "Sr. George Orwell", "Sr. David Harvey"]
+    self.assertListEqual(t1parte1.srify(l), lr)
+
+
 if __name__ == '__main__':
   unittest.main()
