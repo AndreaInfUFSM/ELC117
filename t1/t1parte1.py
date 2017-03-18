@@ -135,3 +135,8 @@ def isNegative(n):
 def negatives(l):
     return list(filter(isNegative, l))
 
+def isBetween1and100(n):
+    return (n >= 1) and (n<=100)
+
+def between1and100(l):
+    return list(filter(isBetween1and100,l))

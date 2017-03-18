@@ -41,7 +41,6 @@ class TestTrabalho1Parte1(unittest.TestCase):
 
     # Testa função somaQuad com valores aleatórios.
     def test_somaQuad_rand(self):
-        random.seed()
         # Realiza 100 testes aleatórios com valores entre 0 e 10000.
         for _ in range(0,100):
             rx = random.uniform(0, 10000)
@@ -112,5 +111,19 @@ class TestTrabalho1Parte1(unittest.TestCase):
         l_res = [-5,-4,-3,-2,-1]
         self.assertListEqual(t1parte1.negatives(l), l_res)
 
+    def test_isBetween1and100(self):
+        self.assertTrue(t1parte1.isBetween1and100(1))
+        self.assertTrue(t1parte1.isBetween1and100(100))
+        for _ in range(0, 1000):
+            self.assertTrue(t1parte1.isBetween1and100(random.uniform(1,100)))
+        self.assertFalse(t1parte1.isBetween1and100(0.9999))
+        self.assertFalse(t1parte1.isBetween1and100(100.001))
+
+    def test_between1and100(self):
+        l = [-2,-1,-0.5,0,0.5,1,5,50,70,99,100,100.1,105]
+        l_res = [1,5,50,70,99,100]
+        self.assertListEqual(t1parte1.between1and100(l), l_res)
+
 if __name__ == '__main__':
+    random.seed()
     unittest.main()
