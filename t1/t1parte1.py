@@ -103,3 +103,29 @@ def countSpaces(s):
   out: integer
     número de espaços contidos em `s`"""
   return len(list(filter(isSpace,s)))
+
+def calcPoly(n):
+  """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
+
+  Parameters
+  ----------
+  n: numeric
+
+  Returns
+  -------
+  out: numeric"""
+  return 3.*(n**2.) + (2./n) + 1.
+
+def calcListPoly(l):
+  """Recebe uma lista de números aplicando a função `calcPoly` para cada
+  número na lista. Retorna uma lista com os resultados.
+
+  Parameters
+  ----------
+  l: list
+
+  Returns
+  -------
+  out: list"""
+  return list(map(calcPoly, l))
+
