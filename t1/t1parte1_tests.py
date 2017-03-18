@@ -124,6 +124,19 @@ class TestTrabalho1Parte1(unittest.TestCase):
         l_res = [1,5,50,70,99,100]
         self.assertListEqual(t1parte1.between1and100(l), l_res)
 
+    def test_isEven(self):
+        self.assertTrue(t1parte1.isEven(2))
+        self.assertTrue(t1parte1.isEven(4))
+        self.assertTrue(t1parte1.isEven(100))
+        self.assertFalse(t1parte1.isEven(1))
+        self.assertFalse(t1parte1.isEven(5))
+        self.assertFalse(t1parte1.isEven(101))
+
+    def test_evens(self):
+        l = [1,2,3,4,5,6,7,8,9,10]
+        l_res = [2,4,6,8,10]
+        self.assertListEqual(t1parte1.evens(l), l_res)
+
 if __name__ == '__main__':
     random.seed()
     unittest.main()

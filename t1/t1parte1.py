@@ -22,112 +22,112 @@
 # THE SOFTWARE.
 
 def somaQuad(x,y):
-  """Retorna a soma dos quadrados de dois números, preservando o tipo original.
+    """Retorna a soma dos quadrados de dois números, preservando o tipo original.
 
-  Parameters
-  ----------
-  x: numeric
+    Parameters
+    ----------
+    x: numeric
 
-  y: numeric
+    y: numeric
 
-  Returns
-  -------
-  out: numeric
-    Valor numerico de mesmo tipo de `x` e `y`."""
-  return x**2 + y**2
+    Returns
+    -------
+    out: numeric
+        Valor numerico de mesmo tipo de `x` e `y`."""
+    return x**2 + y**2
 
 
 def hasEqHeads(l1,l2):
-  """Verifica se duas listas possuem o mesmo primeiro elemento.
+    """Verifica se duas listas possuem o mesmo primeiro elemento.
 
-  Parameters
-  ----------
-  l1: list
+    Parameters
+    ----------
+    l1: list
 
-  l2: list
+    l2: list
 
-  Returns
-  -------
-  out: boolean
-    True caso l1[0] e l2[0] forem iguais."""
-  return l1[0] == l2[0]
+    Returns
+    -------
+    out: boolean
+        True caso l1[0] e l2[0] forem iguais."""
+    return l1[0] == l2[0]
 
 def addSr(s):
-  """Adiciona a string "Sr. " na frente de uma dada string.
+    """Adiciona a string "Sr. " na frente de uma dada string.
 
-  Parameters
-  ----------
-  s: string
+    Parameters
+    ----------
+    s: string
 
-  Returns
-  -------
-  out: string
-    "Sr. " + s"""
-  return "Sr. " + s
+    Returns
+    -------
+    out: string
+        "Sr. " + s"""
+    return "Sr. " + s
 
 def srify(l):
-  """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
-  nome.
+    """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
+    nome.
 
-  Parameters
-  ----------
-  l: list
+    Parameters
+    ----------
+    l: list
 
-  Returns
-  -------
-  out: list"""
-  return list(map(addSr, l))
+    Returns
+    -------
+    out: list"""
+    return list(map(addSr, l))
 
 def isSpace(c):
-  """Recebe um caractere e verifica se é um espaço em branco
+    """Recebe um caractere e verifica se é um espaço em branco
 
-  Parameters
-  ----------
-  c: character
+    Parameters
+    ----------
+    c: character
 
-  Returns
-  -------
-  out: boolean
-    True em caso de espaço, False caso contrário"""
-  return c == " "
+    Returns
+    -------
+    out: boolean
+        True em caso de espaço, False caso contrário"""
+    return c == " "
 
 def countSpaces(s):
-  """Recebe uma string e retorna o número de espaços nela contidos
+    """Recebe uma string e retorna o número de espaços nela contidos
 
-  Parameters
-  ----------
-  s: string
+    Parameters
+    ----------
+    s: string
 
-  Returns
-  -------
-  out: integer
-    número de espaços contidos em `s`"""
-  return len(list(filter(isSpace,s)))
+    Returns
+    -------
+    out: integer
+        número de espaços contidos em `s`"""
+    return len(list(filter(isSpace,s)))
 
 def calcPoly(n):
-  """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
+    """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
 
-  Parameters
-  ----------
-  n: numeric
+    Parameters
+    ----------
+    n: numeric
 
-  Returns
-  -------
-  out: numeric"""
-  return 3.*(n**2.) + (2./n) + 1.
+    Returns
+    -------
+    out: numeric"""
+    return 3.*(n**2.) + (2./n) + 1.
 
 def calcListPoly(l):
-  """Recebe uma lista de números aplicando a função `calcPoly` para cada
-  número na lista. Retorna uma lista com os resultados.
+    """Recebe uma lista de números aplicando a função `calcPoly` para cada
+    número na lista. Retorna uma lista com os resultados.
 
-  Parameters
-  ----------
-  l: list
+    Parameters
+    ----------
+    l: list
 
-  Returns
-  -------
-  out: list"""
-  return list(map(calcPoly, l))
+    Returns
+    -------
+    out: list"""
+    return list(map(calcPoly, l))
 
 def isNegative(n):
     return n < 0
@@ -140,3 +140,9 @@ def isBetween1and100(n):
 
 def between1and100(l):
     return list(filter(isBetween1and100,l))
+
+def isEven(n):
+    return n%2 == 0
+
+def evens(l):
+    return list(filter(isEven, l))
