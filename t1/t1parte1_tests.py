@@ -59,20 +59,11 @@ class TestTrabalho1Parte1(unittest.TestCase):
         l2 = [4,3,2,1]
         self.assertFalse(t1parte1.hasEqHeads(l1,l2))
 
-    # Testa função auxiliar addSr
-    def test_addSr(self):
-        self.assertEqual(t1parte1.addSr("Noam Chomsky"), "Sr. Noam Chomsky")
-
     # Testa funcão srify
     def test_srify(self):
         l = ["Noam Chomsky", "George Orwell", "David Harvey"]
         lr = ["Sr. Noam Chomsky", "Sr. George Orwell", "Sr. David Harvey"]
         self.assertListEqual(t1parte1.srify(l), lr)
-
-    # Testa função isSapce
-    def test_isSapce(self):
-        self.assertTrue(t1parte1.isSpace(" "))
-        self.assertFalse(t1parte1.isSpace("a"))
 
     # Testa função countSpaces
     def test_countSpaces(self):
@@ -83,13 +74,6 @@ class TestTrabalho1Parte1(unittest.TestCase):
         self.assertEqual(t1parte1.countSpaces(dois), 2)
         self.assertEqual(t1parte1.countSpaces(cinco), 5)
 
-    # Testa função calcPoly utilizando valores calculados
-    def test_calcPoly(self):
-        l = [1, 2, 3, 4, 4.25, 4.5, 4.75, 5]
-        l_res = [6., 14., 86./3, 99./2, 55.6581, 62.1944, 69.1086, 382./5]
-        for (v,r) in zip(l,l_res):
-            self.assertTrue(math.isclose(t1parte1.calcPoly(v), r, rel_tol=1e-5))
-
     # Testa função calcListPoly utilizando valores calculados
     def test_calcListPoly(self):
         l = [1, 2, 3, 4, 4.25, 4.5, 4.75, 5]
@@ -97,49 +81,32 @@ class TestTrabalho1Parte1(unittest.TestCase):
         for (v,r) in zip(t1parte1.calcListPoly(l),l_res):
             self.assertTrue(math.isclose(v, r, rel_tol=1e-5))
 
-    # Testa função isNegative
-    def test_isNegative(self):
-        self.assertTrue(t1parte1.isNegative(-1))
-        self.assertTrue(t1parte1.isNegative(-1.5))
-        self.assertFalse(t1parte1.isNegative(0))
-        self.assertFalse(t1parte1.isNegative(1))
-        self.assertFalse(t1parte1.isNegative(1.5))
-
     # Testa função negatives
     def test_negatives(self):
         l = [-5,-4,-3,-2,-1,0,1,2,3,4,5]
         l_res = [-5,-4,-3,-2,-1]
         self.assertListEqual(t1parte1.negatives(l), l_res)
 
-    def test_isBetween1and100(self):
-        self.assertTrue(t1parte1.isBetween1and100(1))
-        self.assertTrue(t1parte1.isBetween1and100(100))
-        for _ in range(0, 1000):
-            self.assertTrue(t1parte1.isBetween1and100(random.uniform(1,100)))
-        self.assertFalse(t1parte1.isBetween1and100(0.9999))
-        self.assertFalse(t1parte1.isBetween1and100(100.001))
-
     def test_between1and100(self):
         l = [-2,-1,-0.5,0,0.5,1,5,50,70,99,100,100.1,105]
         l_res = [1,5,50,70,99,100]
         self.assertListEqual(t1parte1.between1and100(l), l_res)
 
-    def test_isEven(self):
-        self.assertTrue(t1parte1.isEven(2))
-        self.assertTrue(t1parte1.isEven(4))
-        self.assertTrue(t1parte1.isEven(100))
-        self.assertFalse(t1parte1.isEven(1))
-        self.assertFalse(t1parte1.isEven(5))
-        self.assertFalse(t1parte1.isEven(101))
-        for _ in range(0, 1000):
-            self.assertTrue(t1parte1.isEven(random.randint(1,10000)*2))
-        for _ in range(0, 1000):
-            self.assertFalse(t1parte1.isEven(random.randint(1,10000)*2+1))
-
     def test_evens(self):
         l = [1,2,3,4,5,6,7,8,9,10]
         l_res = [2,4,6,8,10]
         self.assertListEqual(t1parte1.evens(l), l_res)
+
+    def test_charFound(self):
+        s = "abcdef"
+        self.assertTrue(t1parte1.charFound("a",s))
+        self.assertTrue(t1parte1.charFound("b",s))
+        self.assertTrue(t1parte1.charFound("c",s))
+        self.assertTrue(t1parte1.charFound("d",s))
+        self.assertTrue(t1parte1.charFound("e",s))
+        self.assertTrue(t1parte1.charFound("f",s))
+        self.assertFalse(t1parte1.charFound("w",s))
+        self.assertFalse(t1parte1.charFound("z",s))
 
 if __name__ == '__main__':
     random.seed()

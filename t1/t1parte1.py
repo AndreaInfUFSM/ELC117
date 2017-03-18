@@ -52,18 +52,6 @@ def hasEqHeads(l1,l2):
         True caso l1[0] e l2[0] forem iguais."""
     return l1[0] == l2[0]
 
-def addSr(s):
-    """Adiciona a string "Sr. " na frente de uma dada string.
-
-    Parameters
-    ----------
-    s: string
-
-    Returns
-    -------
-    out: string
-        "Sr. " + s"""
-    return "Sr. " + s
 
 def srify(l):
     """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
@@ -76,20 +64,10 @@ def srify(l):
     Returns
     -------
     out: list"""
+    def addSr(s):
+        return "Sr. " + s
     return list(map(addSr, l))
 
-def isSpace(c):
-    """Recebe um caractere e verifica se é um espaço em branco
-
-    Parameters
-    ----------
-    c: character
-
-    Returns
-    -------
-    out: boolean
-        True em caso de espaço, False caso contrário"""
-    return c == " "
 
 def countSpaces(s):
     """Recebe uma string e retorna o número de espaços nela contidos
@@ -102,19 +80,10 @@ def countSpaces(s):
     -------
     out: integer
         número de espaços contidos em `s`"""
+    def isSpace(c):
+        return c == " "
     return len(list(filter(isSpace,s)))
 
-def calcPoly(n):
-    """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
-
-    Parameters
-    ----------
-    n: numeric
-
-    Returns
-    -------
-    out: numeric"""
-    return 3.*(n**2.) + (2./n) + 1.
 
 def calcListPoly(l):
     """Recebe uma lista de números aplicando a função `calcPoly` para cada
@@ -127,22 +96,35 @@ def calcListPoly(l):
     Returns
     -------
     out: list"""
+    def calcPoly(n):
+        """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
+
+        Parameters
+        ----------
+        n: numeric
+
+        Returns
+        -------
+        out: numeric"""
+        return 3.*(n**2.) + (2./n) + 1.
     return list(map(calcPoly, l))
 
-def isNegative(n):
-    return n < 0
-
 def negatives(l):
+    def isNegative(n):
+        return n < 0
     return list(filter(isNegative, l))
 
-def isBetween1and100(n):
-    return (n >= 1) and (n<=100)
-
 def between1and100(l):
+    def isBetween1and100(n):
+        return (n >= 1) and (n<=100)
     return list(filter(isBetween1and100,l))
 
-def isEven(n):
-    return n%2 == 0
-
 def evens(l):
+    def isEven(n):
+        return n%2 == 0
     return list(filter(isEven, l))
+
+def charFound(c,s):
+    def isCharEq(c1,c2=c):
+        return c1==c2
+    return len(list(filter(isCharEq,s))) >= 1
