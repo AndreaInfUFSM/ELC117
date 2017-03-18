@@ -128,3 +128,8 @@ def charFound(c,s):
     def isCharEq(c1,c2=c):
         return c1==c2
     return len(list(filter(isCharEq,s))) >= 1
+
+def tagify(tag, l):
+    def addTag(s,t=tag):
+        return "<" + t + ">" + s + "</" + t + ">"
+    return list(map(addTag,l))
