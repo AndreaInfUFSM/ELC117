@@ -20,21 +20,22 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+from datetime import date
 
 # Escreva uma função que receba uma lista de nomes e retorne uma lista com a
 # string "Sr. " adicionada ao início de cada nome.
 def srify(l):
-    pass
+    return list(map(lambda s:"Sr. " + s, l))
 
 # Escreva uma função que, dada uma lista de números, calcule 3n*2 + 2/n + 1
 # para cada número n da lista.
 def calcListPoly(l):
-    pass
+    return list(map(lambda n:(3.*n**2.)+(2./n)+1., l))
 
 # Crie uma função que receba uma lista de nomes e retorne outra lista com
 # somente aqueles nomes que terminarem com a letra 'a'.
-def endWithA(l):
-    pass
+def endsWithA(l):
+    return list(filter(lambda s:s[-1]=="a", l))
 
 # Escreva uma função que, dada uma lista de idades de pessoas no ano atual,
 # retorne uma lista somente com as idades de quem nasceu depois de 1970. Para
@@ -44,7 +45,7 @@ def endWithA(l):
 # >>> idades([20,30,51,57])
 # [20, 30]
 def idades(l):
-    pass
+    return list(filter(lambda n:date.today().year-n>1970, l))
 
 # O código abaixo é escrito em Python imperativo. Escreva um código equivalente
 # usando programação funcional.
@@ -55,4 +56,4 @@ def idades(l):
 #  new_numbers.append(number * 2)
 # print(new_numbers)
 def funcional():
-    pass
+    print(list(map(lambda n:n*2, [1, 2, 3, 4])))
