@@ -27,7 +27,6 @@ def somaQuad(x,y):
     Parameters
     ----------
     x: numeric
-
     y: numeric
 
     Returns
@@ -43,7 +42,6 @@ def hasEqHeads(l1,l2):
     Parameters
     ----------
     l1: list
-
     l2: list
 
     Returns
@@ -97,39 +95,82 @@ def calcListPoly(l):
     -------
     out: list"""
     def calcPoly(n):
-        """Recebe um número e calcula o resultado do polinômio `3*n^2 + 2/n + 1`
-
-        Parameters
-        ----------
-        n: numeric
-
-        Returns
-        -------
-        out: numeric"""
         return 3.*(n**2.) + (2./n) + 1.
     return list(map(calcPoly, l))
 
 def negatives(l):
+    """Recebe uma lista de números e retorna outra lista contendo somente os
+    números negativos.
+
+    Parameters
+    ----------
+    l: list
+
+    Returns
+    -------
+    out: list"""
     def isNegative(n):
         return n < 0
     return list(filter(isNegative, l))
 
 def between1and100(l):
+    """Recebe uma lista de números e retorna outra lista contendo somente os
+    números entre 1 em 100, inclusive.
+
+    Parameters
+    ----------
+    l: list
+
+    Returns
+    -------
+    out: list"""
     def isBetween1and100(n):
         return (n >= 1) and (n<=100)
     return list(filter(isBetween1and100,l))
 
 def evens(l):
+    """Recebe uma lista de números e retorna outra lista contendo somente os
+    números pares.
+
+    Parameters
+    ----------
+    l: list
+
+    Returns
+    -------
+    out: list"""
     def isEven(n):
         return n%2 == 0
     return list(filter(isEven, l))
 
 def charFound(c,s):
+    """Recebe um caractere e uma string, retornando `True` caso o caractere
+    estiver contido na string e False caso contrário.
+
+    Parameters
+    ----------
+    c: character
+    s: string
+
+    Returns
+    -------
+    out: boolean"""
     def isCharEq(c1,c2=c):
         return c1==c2
     return len(list(filter(isCharEq,s))) >= 1
 
 def tagify(tag, l):
+    """Recebe uma lista de strings e uma tag, retornando outra lista de
+    strings com a tag adicionada no início e final de cada string.
+
+    Parameters
+    ----------
+    tag: string
+    l: list
+
+    Returns
+    -------
+    out: list"""
     def addTag(s,t=tag):
         return "<" + t + ">" + s + "</" + t + ">"
     return list(map(addTag,l))

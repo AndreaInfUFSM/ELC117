@@ -87,16 +87,19 @@ class TestTrabalho1Parte1(unittest.TestCase):
         l_res = [-5,-4,-3,-2,-1]
         self.assertListEqual(t1parte1.negatives(l), l_res)
 
+    # Testa função between1and100
     def test_between1and100(self):
         l = [-2,-1,-0.5,0,0.5,1,5,50,70,99,100,100.1,105]
         l_res = [1,5,50,70,99,100]
         self.assertListEqual(t1parte1.between1and100(l), l_res)
 
+    # Testa função evens
     def test_evens(self):
         l = [1,2,3,4,5,6,7,8,9,10]
         l_res = [2,4,6,8,10]
         self.assertListEqual(t1parte1.evens(l), l_res)
 
+    # Testa função charFound
     def test_charFound(self):
         s = "abcdef"
         self.assertTrue(t1parte1.charFound("a",s))
@@ -108,6 +111,7 @@ class TestTrabalho1Parte1(unittest.TestCase):
         self.assertFalse(t1parte1.charFound("w",s))
         self.assertFalse(t1parte1.charFound("z",s))
 
+    # Testa função tagify
     def test_tagify(self):
         l = ["teste1", "teste2", "teste3"]
         lr_b = ["<b>teste1</b>", "<b>teste2</b>", "<b>teste3</b>"]
