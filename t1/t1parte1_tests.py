@@ -98,5 +98,19 @@ class TestTrabalho1Parte1(unittest.TestCase):
         for (v,r) in zip(t1parte1.calcListPoly(l),l_res):
             self.assertTrue(math.isclose(v, r, rel_tol=1e-5))
 
+    # Testa função isNegative
+    def test_isNegative(self):
+        self.assertTrue(t1parte1.isNegative(-1))
+        self.assertTrue(t1parte1.isNegative(-1.5))
+        self.assertFalse(t1parte1.isNegative(0))
+        self.assertFalse(t1parte1.isNegative(1))
+        self.assertFalse(t1parte1.isNegative(1.5))
+
+    # Testa função negatives
+    def test_negatives(self):
+        l = [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+        l_res = [-5,-4,-3,-2,-1]
+        self.assertListEqual(t1parte1.negatives(l), l_res)
+
 if __name__ == '__main__':
     unittest.main()

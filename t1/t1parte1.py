@@ -129,3 +129,9 @@ def calcListPoly(l):
   out: list"""
   return list(map(calcPoly, l))
 
+def isNegative(n):
+    return n < 0
+
+def negatives(l):
+    return list(filter(isNegative, l))
+
