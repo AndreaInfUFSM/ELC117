@@ -1,13 +1,13 @@
 # Trabalho 1: Programação funcional em Python
 ## Arquivos
-  * [t1parte1.py](t1parte1.py): Exercícios da primeira parte do `trabalho 1`.
+  * [t1parte1.py](t1parte1.py): Exercícios da primeira parte do **trabalho 1**.
   * [t1parte1_tests.py](t1parte1_tests.py): Testes das funções implementadas em [t1parte1.py](t1parte1.py).
-  * [t1parte2.py](t1parte2.py): Exercicios da segunda parte do `trabalho 1`.
+  * [t1parte2.py](t1parte2.py): Exercicios da segunda parte do **trabalho 1**.
   * [t1parte2_tests.py](t1parte2_tests.py): Testes das funções implementadas em [t1parte2.py](t1parte2.py).
 ## Descrição
-O objetivo deste trabalho era a implementação de funcões propostas utilizando `programação funcional` na linguagem `Python`.
+O objetivo deste trabalho era a implementação de funcões propostas utilizando **programação funcional** na linguagem **Python**.
 ### Parte 1
-A primeira parte do `trabalho 1` tem como proposta a utilização de `funções auxilires` para a implementação das funcões.
+A primeira parte do **trabalho 1** tem como proposta a utilização de **funções auxilires** para a implementação das funcões.
 
 Foram implementadas as seguintes funcões conforme seus enunciados:
 
@@ -32,9 +32,9 @@ Defina uma função auxiliar para ajudar neste exercício.
 
 10. Escreva uma função que receba uma lista de strings e retorne uma nova lista com adição de marcações HTML (p. ex.: `<B>` e `</B>`) antes e depois de cada string.
 
-Todas a funções implementadas na `parte 1` do trabalho podem ser encontradas em [t1parte1.py](t1parte1.py).
+Todas a funções implementadas na **parte 1** do trabalho podem ser encontradas em [t1parte1.py](t1parte1.py).
 ### Parte 2
-A segunda parte do `trabalho 1` tem como proposta a utilização de `funções anônimas` para a implementação das funcões.
+A segunda parte do **trabalho 1** tem como proposta a utilização de **funções anônimas** para a implementação das funcões.
 
 Foram implementadas as seguintes funcões conforme seus enunciados:
 
@@ -58,4 +58,4 @@ Foram implementadas as seguintes funcões conforme seus enunciados:
    new_numbers.append(number * 2)
  print(new_numbers)
  ```
- Todas a funções implementadas na `parte 2` do trabalho podem ser encontradas em [t1parte2.py](t1parte2.py).
+ Todas a funções implementadas na **parte 2** do trabalho podem ser encontradas em [t1parte2.py](t1parte2.py).
