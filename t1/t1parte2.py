@@ -25,16 +25,40 @@ from datetime import date
 # Escreva uma função que receba uma lista de nomes e retorne uma lista com a
 # string "Sr. " adicionada ao início de cada nome.
 def srify(l):
+    """Recebe uma lista de nomes e adiciona a string "Sr. " no inicio de cada
+    nome.
+    Parameters
+    ----------
+    l: list
+    Returns
+    -------
+    out: list"""
     return list(map(lambda s:"Sr. " + s, l))
 
 # Escreva uma função que, dada uma lista de números, calcule 3n*2 + 2/n + 1
 # para cada número n da lista.
 def calcListPoly(l):
+    """Recebe uma lista de números aplicando a função `calcPoly` para cada
+    número na lista. Retorna uma lista com os resultados.
+    Parameters
+    ----------
+    l: list
+    Returns
+    -------
+    out: list"""
     return list(map(lambda n:(3.*n**2.)+(2./n)+1., l))
 
 # Crie uma função que receba uma lista de nomes e retorne outra lista com
 # somente aqueles nomes que terminarem com a letra 'a'.
 def endsWithA(l):
+    """Recebe uma lista de strings. Retorna uma lista contendo somente as
+    strings terminadas em `a`.
+    Parameters
+    ----------
+    l: list
+    Returns
+    -------
+    out: list"""
     return list(filter(lambda s:s[-1]=="a", l))
 
 # Escreva uma função que, dada uma lista de idades de pessoas no ano atual,
@@ -45,6 +69,14 @@ def endsWithA(l):
 # >>> idades([20,30,51,57])
 # [20, 30]
 def idades(l):
+    """Recebe uma lista de idades. Retorna uma lista contendo somente as
+    idades de pessoas que nasceram depois de 1970.
+    Parameters
+    ----------
+    l: list
+    Returns
+    -------
+    out: list"""
     return list(filter(lambda n:date.today().year-n>1970, l))
 
 # O código abaixo é escrito em Python imperativo. Escreva um código equivalente
