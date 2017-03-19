@@ -1,3 +1,5 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Brasao_UFSM_Color_300dpi.jpg/220px-Brasao_UFSM_Color_300dpi.jpg" height="145px" align="right">
+
 # ELC117 - Paradigmas de Programação
 Repositório criado para realização das atividades propostas durante a disciplina de `Paradigmas de Programação` realizada no `primeiro semestre de 2017` na `Universidade Federal de Santa Maria`.
 
