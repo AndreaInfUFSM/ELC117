@@ -21,6 +21,6 @@ Repositório criado para realização das atividades propostas durante a discipl
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/260px-Python_logo_and_wordmark.svg.png" height="72px" align="right">
 
-Implementação de funcões propostas utilizando o *paradigma funcional* na linguagem **Python**. Trabalho composto de duas partes:
+Implementação de funcões propostas utilizando o *programação funcional* na linguagem **Python**. Trabalho composto de duas partes:
 * [**Parte 1**](t1/t1parte1.py): Funções implementadas utilizando **funções auxiliares**.
 * [**Parte 2**](t1/t1parte2.py): Funções implementadas utilizando **funções anônimas**.
