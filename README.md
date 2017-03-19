@@ -1,7 +1,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Brasao_UFSM_Color_300dpi.jpg/220px-Brasao_UFSM_Color_300dpi.jpg" height="145px" align="right">
 
 # ELC117 - Paradigmas de Programação
-Repositório criado para realização das atividades propostas durante a disciplina de `Paradigmas de Programação` realizada no `primeiro semestre de 2017` na `Universidade Federal de Santa Maria`.
+Repositório criado para realização das atividades propostas durante a disciplina de **Paradigmas de Programação** realizada no *primeiro semestre de 2017* na **Universidade Federal de Santa Maria**.
 
 ## Informações
 ### Disciplina
@@ -21,6 +21,6 @@ Repositório criado para realização das atividades propostas durante a discipl
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/260px-Python_logo_and_wordmark.svg.png" height="72px" align="right">
 
-Implementação de funcões propostas utilizando o `paradigma funcional` na linguagem `Python`. Trabalho composto de duas partes:
-* [**Parte 1**](t1/t1parte1.py): Funções implementadas utilizando `funções auxiliares`.
-* [**Parte 2**](t1/t1parte2.py): Funções implementadas utilizando `funções anônimas`.
+Implementação de funcões propostas utilizando o *paradigma funcional* na linguagem **Python**. Trabalho composto de duas partes:
+* [**Parte 1**](t1/t1parte1.py): Funções implementadas utilizando **funções auxiliares**.
+* [**Parte 2**](t1/t1parte2.py): Funções implementadas utilizando **funções anônimas**.
