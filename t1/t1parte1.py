@@ -191,7 +191,7 @@ def charFound(c,s):
 # Escreva uma função que receba uma lista de strings e retorne uma nova lista
 # com adição de marcações HTML (p.ex.: <B> e </B>) antes e depois de cada
 # string.
-def tagify(tag, l):
+def tagify(l, tag="B"):
     """Recebe uma lista de strings e uma tag, retornando outra lista de
     strings com a tag adicionada no início e final de cada string.
 

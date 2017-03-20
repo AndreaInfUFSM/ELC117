@@ -114,10 +114,10 @@ class TestTrabalho1Parte1(unittest.TestCase):
     # Testa função tagify
     def test_tagify(self):
         l = ["teste1", "teste2", "teste3"]
-        lr_b = ["<b>teste1</b>", "<b>teste2</b>", "<b>teste3</b>"]
+        lr_b = ["<B>teste1</B>", "<B>teste2</B>", "<B>teste3</B>"]
         lr_center = ["<center>teste1</center>", "<center>teste2</center>", "<center>teste3</center>"]
-        self.assertListEqual(t1parte1.tagify("b",l), lr_b)
-        self.assertListEqual(t1parte1.tagify("center",l), lr_center)
+        self.assertListEqual(t1parte1.tagify(l), lr_b)
+        self.assertListEqual(t1parte1.tagify(l, tag="center"), lr_center)
 
 if __name__ == '__main__':
     random.seed()
